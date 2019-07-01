@@ -1,0 +1,56 @@
+<h1 mat-dialog-title>Contact me </h1>
+<div style="color: red; background-color: #ffebee;padding: 6px 10px 8px 8px;border-radius: 10px;">Fields with (*) are
+    required.</div>
+
+
+    <form [formGroup]="registeredForm">
+        <table cellspacing="0" class="full-width" style="padding-top: 10pt">
+            <tr class="BasicInfo">
+                <td>
+                    <mat-form-field class="full-width">
+                        <input formControlName="First_Name" matInput >
+                        <mat-placeholder>First Name<span style="color: red">*</span></mat-placeholder>
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field class="full-width">
+                        <input formControlName="Last_Name" matInput>
+                        <mat-placeholder>Last Name<span style="color: red">*</span></mat-placeholder>
+                    </mat-form-field>
+
+                </td>
+            </tr>
+        </table>
+        <table cellspacing="0" class="full-width">
+                <tr class="BasicInfo">
+                    <td>
+                        <mat-form-field class="full-width">
+                            <input formControlName="Email" matInput>
+                            <mat-placeholder>Email<span style="color: red">*</span></mat-placeholder>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="full-width">
+                            <input formControlName="Subject" matInput >
+                            <mat-placeholder>Affiliated Company<span style="color: red">*</span></mat-placeholder>
+                        </mat-form-field>
+    
+                    </td>
+                </tr>
+            </table>
+
+
+        <mat-form-field class="full-width">
+            <textarea formControlName="Text" matInput></textarea>
+            <mat-placeholder>Text <span style="color: red">*</span></mat-placeholder>
+        </mat-form-field>
+
+</form>
+<div mat-dialog-actions>
+    <button mat-button (click)="closeDialog()" style="background-color:#26a69a; color:white;"> Cancel
+    </button>
+    <button mat-button (click)="onSave()" style="background-color:#26a69a; color:white;"> Save
+    </button>
+</div>

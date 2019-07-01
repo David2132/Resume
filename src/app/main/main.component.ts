@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Log,Visited} from "../models/models"
 import {DataService} from "../data.service"
+import { MatDialog , MatDialogConfig } from '@angular/material';
+import {ContactComponent} from './contact/contact.component'
 
 @Component({
   selector: 'app-main',
@@ -12,7 +14,7 @@ export class MainComponent implements OnInit {
   log:Log
   visiters:Visited[]
 
-  constructor(private dataService:DataService) { }
+  constructor(private dataService:DataService, private dialog:MatDialog) { }
 
   ngAfterViewInit(){
     
@@ -27,5 +29,15 @@ export class MainComponent implements OnInit {
   getVisit():void{
     this.dataService.getVisited().subscribe(data=>this.visiters=data)
   }
+  
+  openDialog() {
+
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+
+    this.dialog.open(ContactComponent, dialogConfig);
+}
  
 }
