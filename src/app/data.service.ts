@@ -1,101 +1,105 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders} from '@angular/common/http'
-import {skill,education,award,experience,project,Log,Visited} from './models/models'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
+import { skill, education, award, experience, project, Log, Visited, Contact } from './models/models'
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  Skill:skill;
+  Skill: skill;
   httpOptions = {
-    headers: new HttpHeaders({'Content-Type':'application/json'})
-   }
-   baseURL = "https://resume-backend-david.herokuapp.com/"
-  constructor(private httpClient:HttpClient) {
-    
+    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
-  getSkills(){
-    return this.httpClient.get<skill[]>(this.baseURL+"skill");
+  baseURL = "https://resume-backend-david.herokuapp.com/"
+  constructor(private httpClient: HttpClient) {
+
   }
-  getSkill(data:skill){
-    return this.httpClient.get<skill>(this.baseURL+'skill/'+data._id)
+  getSkills() {
+    return this.httpClient.get<skill[]>(this.baseURL + "skill");
   }
-  postSkill(data:skill){
-    return this.httpClient.post(this.baseURL+'skill/',data)
+  getSkill(data: skill) {
+    return this.httpClient.get<skill>(this.baseURL + 'skill/' + data._id)
   }
-  updateSkill(data:skill){
-    return this.httpClient.patch(this.baseURL+'skill/'+ data._id,data);
+  postSkill(data: skill) {
+    return this.httpClient.post(this.baseURL + 'skill/', data)
   }
-  deleteSkill(data:skill){
-    return this.httpClient.delete(this.baseURL+'skill/'+data._id);
+  updateSkill(data: skill) {
+    return this.httpClient.patch(this.baseURL + 'skill/' + data._id, data);
   }
-  getEducations(){
-    return this.httpClient.get<education[]>(this.baseURL+'education/');
-  } 
-  getEducation(data:education){
-    return this.httpClient.get<education>(this.baseURL+'education/'+data._id)
+  deleteSkill(data: skill) {
+    return this.httpClient.delete(this.baseURL + 'skill/' + data._id);
   }
-  postEducation(data:education){
-    return this.httpClient.post(this.baseURL+'education/',data)
+  getEducations() {
+    return this.httpClient.get<education[]>(this.baseURL + 'education/');
   }
-  updateEducastion(data:education){
-    return this.httpClient.patch(this.baseURL+'education/'+data._id,data);
+  getEducation(data: education) {
+    return this.httpClient.get<education>(this.baseURL + 'education/' + data._id)
   }
-  deleteEducation(data:education){
-    return this.httpClient.delete(this.baseURL+'education/'+data._id);
+  postEducation(data: education) {
+    return this.httpClient.post(this.baseURL + 'education/', data)
   }
-  getExperiences(){
-    return this.httpClient.get<experience[]>(this.baseURL+'experience/');
+  updateEducastion(data: education) {
+    return this.httpClient.patch(this.baseURL + 'education/' + data._id, data);
   }
-  getExperience(data:experience){
-    return this.httpClient.get<experience>(this.baseURL+'experience/'+data._id)
+  deleteEducation(data: education) {
+    return this.httpClient.delete(this.baseURL + 'education/' + data._id);
   }
-  postExperience(data:experience){
-    return this.httpClient.post(this.baseURL+'experience/',data)
+  getExperiences() {
+    return this.httpClient.get<experience[]>(this.baseURL + 'experience/');
   }
-  updateExperience(data:experience){
-    return this.httpClient.patch(this.baseURL+'experience/',data);
+  getExperience(data: experience) {
+    return this.httpClient.get<experience>(this.baseURL + 'experience/' + data._id)
   }
-  deleteExperience(data:experience){
-    return this.httpClient.delete(this.baseURL+'experience/'+data._id+data._id);
+  postExperience(data: experience) {
+    return this.httpClient.post(this.baseURL + 'experience/', data)
   }
-  getProjects(){
-    return this.httpClient.get<project[]>(this.baseURL+'project/');
+  updateExperience(data: experience) {
+    return this.httpClient.patch(this.baseURL + 'experience/', data);
   }
-  getProject(data:project){
-    return this.httpClient.get<project>(this.baseURL+'project/'+data._id)
+  deleteExperience(data: experience) {
+    return this.httpClient.delete(this.baseURL + 'experience/' + data._id + data._id);
   }
-  postProject(data:project){
-    return this.httpClient.post(this.baseURL+'project/',data)
+  getProjects() {
+    return this.httpClient.get<project[]>(this.baseURL + 'project/');
   }
-  updateProject(data:project){
-    return this.httpClient.patch(this.baseURL+'project/'+data._id,data);
+  getProject(data: project) {
+    return this.httpClient.get<project>(this.baseURL + 'project/' + data._id)
   }
-  deleteProject(data:project){
-    return this.httpClient.delete(this.baseURL+'project/'+data._id);
+  postProject(data: project) {
+    return this.httpClient.post(this.baseURL + 'project/', data)
   }
-  getAwards(){
-    return this.httpClient.get<award[]>(this.baseURL+'award/');
+  updateProject(data: project) {
+    return this.httpClient.patch(this.baseURL + 'project/' + data._id, data);
   }
-  getAward(data:award){
-    return this.httpClient.get<award>(this.baseURL+'award/'+data._id)
+  deleteProject(data: project) {
+    return this.httpClient.delete(this.baseURL + 'project/' + data._id);
   }
-  postAward(data:award){
+  getAwards() {
+    return this.httpClient.get<award[]>(this.baseURL + 'award/');
+  }
+  getAward(data: award) {
+    return this.httpClient.get<award>(this.baseURL + 'award/' + data._id)
+  }
+  postAward(data: award) {
     console.log("service")
-    return this.httpClient.post(this.baseURL+'award/',data)
+    return this.httpClient.post(this.baseURL + 'award/', data)
   }
-  updateAward(data:award){
-    return this.httpClient.patch(this.baseURL+'award/' + data._id,data);
+  updateAward(data: award) {
+    return this.httpClient.patch(this.baseURL + 'award/' + data._id, data);
   }
-  deleteAward(data:award){
-    return this.httpClient.delete(this.baseURL+'award/'+data._id);
+  deleteAward(data: award) {
+    return this.httpClient.delete(this.baseURL + 'award/' + data._id);
   }
-  getLog(){
+  getLog() {
     return this.httpClient.get<Log[]>(this.baseURL)
   }
-  getVisited(){
-    return this.httpClient.get<Visited[]>(this.baseURL+'visited/')
+  getVisited() {
+    return this.httpClient.get<Visited[]>(this.baseURL + 'visited/')
   }
-  postVisited(){
-    return this.httpClient.post(this.baseURL+'visited/', {})
+  postVisited() {
+    return this.httpClient.post(this.baseURL + 'visited/', {})
+  }
+  postMessage(data: Contact) {
+    console.log("DATASERVICE FOR POSTMAN")
+   return this.httpClient.post(this.baseURL, data)
   }
 }
