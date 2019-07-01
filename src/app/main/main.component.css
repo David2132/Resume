@@ -6,4 +6,14 @@ mat-expansion-panel {
     margin-left: 10%;
     opacity: 0.75;
 }
+button {
+    opacity: 0.75;
+    border:2px solid black;
+    text-align: center;
+    width: 20%;
+    height: 5%;
+    margin-left: 40%;
+    background-color: white
+    
+}
 
