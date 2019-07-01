@@ -9,9 +9,12 @@ import { EducationComponent } from './education/education.component';
 import { ProjectsComponent } from './projects/projects.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatExpansionModule} from '@angular/material';
+import {MatButtonModule,MatInputModule, MatCheckboxModule, MatExpansionModule, MatDialogModule, MatFormFieldModule, MatSnackBarModule,} from '@angular/material';
+
 import { AwardsComponent } from './awards/awards.component';
 import { MainComponent } from './main/main.component';
+import { ContactComponent } from './main/contact/contact.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -26,6 +29,7 @@ import { MainComponent } from './main/main.component';
     ProjectsComponent,
     AwardsComponent,
     MainComponent,
+    ContactComponent,
     
  
   ],
@@ -36,9 +40,16 @@ import { MainComponent } from './main/main.component';
     HttpClientModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDialogModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatSnackBarModule,
+    MatInputModule
   ],
-  providers: [],
+  providers: [ContactComponent],
+  entryComponents:[ContactComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule{
