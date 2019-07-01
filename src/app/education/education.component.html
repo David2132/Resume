@@ -1,0 +1,35 @@
+<table>
+ 
+    <div *ngFor="let education of Data">
+      <tr>
+        <td>
+          {{education.School}} 
+        </td>
+        <td style="text-align: center">
+          {{education.Location}}
+        </td>
+        <td>
+          Graduation Date: {{education.Grad}}
+        </td>
+       <td rowspan="3"><img src="https://web.louisiana.edu/sites/web/files/Logo%20example%20for%20web.png" style="width: 80pt;height:60pt;margin-left: 25pt" align="top"></td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td>
+          Bachelors: {{education.Bachelors}}
+        </td>
+        <td></td>
+      
+      </tr>
+      <tr>
+        <td >
+        </td>
+        <td style="text-align: center" colspan="2"> Major: {{education.Major}}</td>
+        <td></td>
+     
+      </tr>
+    </div>
+  </table>
+  
+  

@@ -1,0 +1,9 @@
+mat-expansion-panel {
+    border: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 2px;
+    width: 80%;
+    margin-left: 10%;
+    opacity: 0.75;
+}
+

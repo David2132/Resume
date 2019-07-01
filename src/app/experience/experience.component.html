@@ -1,0 +1,15 @@
+<table *ngFor="let experience of Data" style="width:70%">
+    <tr>
+      <td style="width: 60%">
+        {{experience.Name}}, {{experience.Location}} 
+      </td>
+      <td >
+        Timeline: {{experience.Start}} - {{experience.End}}
+      </td>
+    </tr>
+    <tr>
+      <td style="text-indent: 110px">
+        {{experience.Position}}
+      </td>
+    </tr>
+  </table>

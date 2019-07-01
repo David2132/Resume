@@ -1,0 +1,85 @@
+<link href="https://fonts.googleapis.com/css?family=Acme|Alfa+Slab+One|Cookie|Didact+Gothic|Great+Vibes|Quattrocento+Sans&display=swap" rel="stylesheet">
+<h1 style="text-align: center;font-family: 'Great Vibes', cursive;" >  David Duong's Resume</h1>
+
+<div style="text-align: center;margin-bottom: 10pt">
+    <b *ngIf="visiters">
+      Visiter Count: {{visiters.length}} 
+    </b>
+  </div>
+
+<div style="text-align: center;margin-bottom: 10pt">
+  <b *ngIf="log">
+    Last Updated: {{log.Date}} 
+  </b>
+</div>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <b>Education</b>
+    </mat-panel-title>
+    <mat-panel-description>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <app-education></app-education>
+</mat-expansion-panel>
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <b>Experiences</b>
+    </mat-panel-title>
+    <mat-panel-description>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <app-experience></app-experience>
+</mat-expansion-panel>
+
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <b>Projects</b>
+    </mat-panel-title>
+    <mat-panel-description>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <app-projects></app-projects>
+</mat-expansion-panel>
+
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <b>Skills</b>
+    </mat-panel-title>
+    <mat-panel-description>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <app-skills></app-skills>
+</mat-expansion-panel>
+
+
+
+
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <b>Awards</b>
+    </mat-panel-title>
+    <mat-panel-description>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <app-awards></app-awards>
+</mat-expansion-panel>
+
+
+<!-- <table style="position: absolute; bottom: 5px; text-align: center">>
+    <td style="width: 50%">
+      <b>Created by: David Duong</b>
+    </td>
+    <td style="width:50%;">
+        <b *ngIf="log">
+            Last Updated: {{log.Date}} </b>
+    </td>
+  </table> -->
