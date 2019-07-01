@@ -54,3 +54,10 @@ export class Visited{
   __v?:number;
   Date?:string;
 }
+export class Contact{
+  First_Name: String;
+  Last_Name: String;
+  Email: String;
+  Subject: String;
+  Text: String
+} 
