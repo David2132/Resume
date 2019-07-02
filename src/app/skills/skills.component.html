@@ -8,7 +8,7 @@
     </tr>
   </table>
 </div>
-<div *ngIf="isDesktopDevice">
+<div *ngIf="!isDesktopDevice">
     <table >
       <tr *ngFor="let array of temp">
         <td *ngFor="let skill of array" style="width: 30%">
