@@ -1,35 +1,99 @@
-<table>
- 
+<div class="desktop" *ngIf="this.dataService.isDesktopDevice">
+  <table>
+
     <div *ngFor="let education of Data">
       <tr>
         <td>
-          {{education.School}} 
+          {{education.School}}
         </td>
-        <td style="text-align: center">
+        <td style="text-align: center; width: 204pt">
           {{education.Location}}
         </td>
         <td>
           Graduation Date: {{education.Grad}}
         </td>
-       <td rowspan="3"><img src="https://web.louisiana.edu/sites/web/files/Logo%20example%20for%20web.png" style="width: 80pt;height:60pt;margin-left: 25pt" align="top"></td>
+        <td rowspan="3"><img src="https://web.louisiana.edu/sites/web/files/Logo%20example%20for%20web.png"
+            style="width: 80pt;height:60pt;margin-left: 25pt" align="top"></td>
       </tr>
       <tr>
-        <td>
-        </td>
-        <td>
+        <td style="text-align: center" colspan="2">
           Bachelors: {{education.Bachelors}}
         </td>
+        <td>
+        </td>
         <td></td>
-      
+
       </tr>
       <tr>
-        <td >
+        <td>
+
         </td>
-        <td style="text-align: center" colspan="2"> Major: {{education.Major}}</td>
+        <td> Major: {{education.Major}} </td>
         <td></td>
-     
+
+      </tr>
+      <tr>
+        <td>
+
+        </td>
+        <td style="text-indent: 30pt"> Major Related GPA: {{education.MGPA}} </td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td style="text-indent: 30pt"> Cumulative GPA: {{education.GPA}} </td>
+        <td></td>
+
       </tr>
     </div>
   </table>
-  
-  
+</div>
+<div class="desktop" *ngIf="!this.dataService.isDesktopDevice" style="font-size: 8.8pt">
+  <table style="width: 100%">
+
+    <div *ngFor="let education of Data">
+      <tr>
+        <td>
+          {{education.School}}
+        </td>
+        <td style="text-align: center; width: 70pt">
+          {{education.Location}}
+        </td>
+        <td style="text-align: right">
+          Grad Date: {{education.Grad}}
+        </td>
+        <td>
+      </tr>
+      <tr>
+        <td colspan="2" style="text-align: center">
+          Bachelors: {{education.Bachelors}}
+        </td>
+        <td>
+        </td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td style="text-align: center" colspan="3"> Major: {{education.Major}}</td>
+        <td> </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td colspan="2"> Major Related GPA:  {{education.MGPA}}</td>
+        <td></td>
+
+      </tr>
+      <tr>
+        <td>
+        </td>
+        <td colspan="2"> Cumulative GPA:  {{education.GPA}}</td>
+        <td></td>
+
+      </tr>
+    </div>
+  </table>
+</div>

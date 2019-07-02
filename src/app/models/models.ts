@@ -12,6 +12,8 @@ export class education{
     Grad: string;
     Bachelors: string;
     Major: string;
+    CGPA: string;
+    GPA: string;
     __v?: number
 
 }

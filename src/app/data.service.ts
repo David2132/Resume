@@ -1,16 +1,21 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { skill, education, award, experience, project, Log, Visited, Contact } from './models/models'
+import { DeviceDetectorService } from 'ngx-device-detector';
+
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
+export class DataService{
+ 
+ 
   Skill: skill;
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
   baseURL = "https://resume-backend-david.herokuapp.com/"
-  constructor(private httpClient: HttpClient) {
+  isDesktopDevice = this.deviceService.isDesktop();
+  constructor(private httpClient: HttpClient,private deviceService: DeviceDetectorService) {
 
   }
   getSkills() {

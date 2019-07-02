@@ -1,28 +1,59 @@
-<table *ngFor="let project of Data; let i = index">
+<div *ngIf="this.dataService.isDesktopDevice">
+  <table *ngFor="let project of Data; let i = index">
 
     <tr>
       <td style="width: 15%">
         <a>{{project.Name}} </a>
-        
+
         <!-- <a *ngIf="true" href="javascript:{{project.Link}}">
           <img src="../../assets/pictures/link.png">
         </a> -->
       </td>
       <td style="width: 30%">
-          <a href="{{project.Github}}">
-              <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
-            </a>
+        <a href="{{project.Github}}">
+          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
+        </a>
       </td>
       <td style="text-align: right">
         Created on: {{project.Date}}
       </td>
     </tr>
-  
+
     <tr>
       <td style="text-indent: 50px" colspan="3">
         {{project.Description}}
       </td>
     </tr>
-  
+
   </table>
-  <!-- <button type="button" (click)="updateProject()">Update</button> -->
+</div>
+<div *ngIf="!this.dataService.isDesktopDevice">
+    <table *ngFor="let project of Data; let i = index">
+  
+      <tr>
+        <td style="width: 25%">
+          <a>{{project.Name}} </a>
+  
+          <!-- <a *ngIf="true" href="javascript:{{project.Link}}">
+            <img src="../../assets/pictures/link.png">
+          </a> -->
+        </td>
+        <td style="width: 30%">
+          <a href="{{project.Github}}">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
+          </a>
+        </td>
+        <td style="text-align: right">
+          Created on: {{project.Date}}
+        </td>
+      </tr>
+  
+      <tr>
+        <td style="text-indent: 50px" colspan="3">
+          {{project.Description}}
+        </td>
+      </tr>
+  
+    </table>
+  </div>
+<!-- <button type="button" (click)="updateProject()">Update</button> -->

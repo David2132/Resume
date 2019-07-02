@@ -10,12 +10,11 @@ import { ProjectsComponent } from './projects/projects.component';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule,MatInputModule, MatCheckboxModule, MatExpansionModule, MatDialogModule, MatFormFieldModule, MatSnackBarModule,} from '@angular/material';
-
 import { AwardsComponent } from './awards/awards.component';
 import { MainComponent } from './main/main.component';
 import { ContactComponent } from './main/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { DeviceDetectorModule } from 'ngx-device-detector';
 
 
 
@@ -46,7 +45,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatSnackBarModule,
-    MatInputModule
+    MatInputModule,
+    DeviceDetectorModule
   ],
   providers: [ContactComponent],
   entryComponents:[ContactComponent],

@@ -1,19 +1,27 @@
-mat-expansion-panel {
-    border: 2px solid black;
+
+.desktop mat-expansion-panel {
+    border: 2px solid ;
     padding-bottom: 10px;
     margin-bottom: 2px;
     width: 80%;
     margin-left: 10%;
     opacity: 0.75;
+  }
+  .mat-expansion-panel-body {
+    padding: 0 24px 5px;
 }
-button {
+.mobile mat-expansion-panel {
+    border: 2px solid ;
+    padding-bottom: 10px;
+    margin-bottom: 2px;
     opacity: 0.75;
-    border:2px solid black;
+  }
+ button {
+    opacity: 0.75;
+    border: 2px solid black;
     text-align: center;
-    width: 20%;
+    width: auto;
     height: 5%;
     margin-left: 40%;
     background-color: white
-    
-}
-
+  }

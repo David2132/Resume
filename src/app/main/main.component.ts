@@ -13,8 +13,12 @@ export class MainComponent implements OnInit {
 
   log:Log
   visiters:Visited[]
+  deviceInfo = false;
 
-  constructor(private dataService:DataService, private dialog:MatDialog) { }
+  constructor(private dataService:DataService, private dialog:MatDialog) {
+    this.deviceInfo = this.dataService.isDesktopDevice
+   }
+  
 
   ngAfterViewInit(){
     

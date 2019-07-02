@@ -11,7 +11,7 @@ export class AwardsComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    console.log("HELLLOOOOOOOOO")
+
     this.getAwards();
   }
   // postAward(): void {
@@ -22,6 +22,6 @@ export class AwardsComponent implements OnInit {
   //   this.dataService.postAward(x).subscribe(data => { console.log("Post was successful"), this.getAwards(); }, err => console.log(err))
   // }
   getAwards(): void {
-    this.dataService.getAwards().subscribe(data => this.Data = data)
+    this.dataService.getAwards().subscribe(data => this.Data = data.reverse())
   }
 }
