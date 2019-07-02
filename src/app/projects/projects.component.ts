@@ -12,6 +12,8 @@ export class ProjectsComponent implements OnInit {
   Data: project[];
   selectedProject:project;
   url:string
+  isDesktopDevice = this.dataService.isDesktopDevice
+
   constructor(private dataService:DataService, private sanitizer:DomSanitizer) { }
 
   ngOnInit() {

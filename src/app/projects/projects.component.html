@@ -1,4 +1,4 @@
-<div *ngIf="this.dataService.isDesktopDevice">
+<div *ngIf="isDesktopDevice">
   <table *ngFor="let project of Data; let i = index">
 
     <tr>
@@ -27,7 +27,7 @@
 
   </table>
 </div>
-<div *ngIf="!this.dataService.isDesktopDevice">
+<div *ngIf="!isDesktopDevice">
     <table *ngFor="let project of Data; let i = index">
   
       <tr>

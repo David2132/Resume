@@ -8,6 +8,8 @@ import {experience} from '../models/models'
 })
 export class ExperienceComponent implements OnInit {
   Data:experience[]
+  isDesktopDevice = this.dataService.isDesktopDevice
+
   constructor(private dataService:DataService) { }
 
   ngOnInit() {

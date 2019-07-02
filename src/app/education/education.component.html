@@ -1,4 +1,4 @@
-<div class="desktop" *ngIf="this.dataService.isDesktopDevice">
+<div class="desktop" *ngIf="isDesktopDevice">
   <table>
 
     <div *ngFor="let education of Data">
@@ -50,7 +50,7 @@
     </div>
   </table>
 </div>
-<div class="desktop" *ngIf="!this.dataService.isDesktopDevice" style="font-size: 8.8pt">
+<div class="desktop" *ngIf="!isDesktopDevice" style="font-size: 8.8pt">
   <table style="width: 100%">
 
     <div *ngFor="let education of Data">

@@ -8,6 +8,7 @@ import { award } from '../models/models'
 })
 export class AwardsComponent implements OnInit {
   Data: award[]
+  isDesktopDevice = this.dataService.isDesktopDevice
   constructor(private dataService: DataService) { }
 
   ngOnInit() {

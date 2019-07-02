@@ -1,4 +1,4 @@
-<div *ngIf="this.dataService.isDesktopDevice">
+<div *ngIf="isDesktopDevice">
   <table style="padding-left: 10em">
     <tr *ngFor="let array of temp">
       <td *ngFor="let skill of array" style="width: 30%">
@@ -8,7 +8,7 @@
     </tr>
   </table>
 </div>
-<div *ngIf="!this.dataService.isDesktopDevice">
+<div *ngIf="isDesktopDevice">
     <table >
       <tr *ngFor="let array of temp">
         <td *ngFor="let skill of array" style="width: 30%">

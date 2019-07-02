@@ -13,6 +13,8 @@ export class SkillsComponent implements OnInit {
   Data: skill[]
   temp:[skill[]]
   selectedSkill: skill
+  isDesktopDevice = this.dataService.isDesktopDevice
+
   ngOnInit() {
     this.getSkills();
     setTimeout(()=>{

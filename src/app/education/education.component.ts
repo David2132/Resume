@@ -9,6 +9,8 @@ import {education} from "../models/models"
 export class EducationComponent implements OnInit {
   Data:education[];
   selectedData:education;
+  isDesktopDevice = this.dataService.isDesktopDevice
+
   constructor(private dataService:DataService) { }
 
   ngOnInit() {
