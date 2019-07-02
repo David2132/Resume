@@ -37,7 +37,7 @@ export class ContactComponent implements OnInit {
       ]),
       Email: new FormControl('', [
         Validators.required,
-        Validators.pattern('[a-zA-Z0-9]+' + '@' + '[a-zA-Z]+' + '.' + '[a-zA-Z]*')
+        Validators.pattern( + '@' + '[a-zA-Z]+' + '.' + '[a-zA-Z]*')
       ]),
 
 
@@ -62,11 +62,10 @@ export class ContactComponent implements OnInit {
   onSave(): void {
     try {
       if (this.Email.errors.pattern) {
-        this.openSnackBar('Read fields are not filled in correctly!', 'Close');
+        this.openSnackBar('Email is not filled in correctly!', 'Close');
       }
       else if (this.First_Name.errors || this.Last_Name.errors || this.Subject.errors || this.Text.errors || this.Email.errors) {
         this.openSnackBar('Required fields are not filled in correctly!', 'Close');
-      
       }
       else {
         var contact:Contact ={
