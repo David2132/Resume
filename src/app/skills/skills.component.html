@@ -1,11 +1,11 @@
 <div *ngIf="isDesktopDevice">
-  <table style="padding-left: 10em">
+  <table style="width: 100%">
     <tr *ngFor="let array of temp">
-      <td *ngFor="let skill of array" style="width: 30%">
+      <td *ngFor="let skill of array" style="width: 25%" style="padding-bottom: 2pt">
         <a> <img src="{{skill.Link}}" style="width: 25pt;height: 25pt;" align="middle" alt="Awkard"> </a>
         {{skill.Name}}
       </td>
-    </tr>
+    </tr> 
   </table>
 </div>
 <div *ngIf="!isDesktopDevice">

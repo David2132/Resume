@@ -17,17 +17,17 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit() {
     this.getSkills();
+    try{
     setTimeout(()=>{
-      this.temp = [this.Data.splice(0,3)];
+      this.temp = [this.Data.splice(0,4)];
         for (var i =0; i < this.Data.length;){
-        this.temp.push(this.Data.splice(i,3))
+        this.temp.push(this.Data.splice(i,4))
       }
-      console.log(this.temp)
-      // if (this.Data.length % 3 != 3){
-      //   this.temp.push(this.Data.splice(this.Data.length-(this.Data.length%3),this.Data.length))
-      // }
+      
     }, 3000)
-  
+    }catch{
+      window.location.href = 'https://david2132.github.io/Resume/'
+    }
   }
 
   getSkills(): void {
