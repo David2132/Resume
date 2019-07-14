@@ -1,24 +1,27 @@
 <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
 
-<h1 style="text-align: center;font-family: 'DM Serif Display', serif;"> David Duong's Resume</h1>
 
-<div style="text-align: center;margin-bottom: 10pt">
-  <b *ngIf="visiters">
-    Visiter Count: {{visiters.length}}
-  </b>
+<div @slideDown>
+  <h1 style="text-align: center;font-family: 'DM Serif Display', serif;"> David Duong's Resume</h1>
+
+  <div style="text-align: center;margin-bottom: 10pt">
+    <b *ngIf="visiters">
+      Visiter Count: {{visiters.length}}
+    </b>
+  </div>
+
+  <div style="text-align: center;margin-bottom: 10pt">
+    <b *ngIf="log">
+      Last Updated: {{log.Date}}
+    </b>
+  </div>
 </div>
-
-<div style="text-align: center;margin-bottom: 10pt">
-  <b *ngIf="log">
-    Last Updated: {{log.Date}}
-  </b>
-</div>
-
 <div *ngIf="deviceInfo" class="desktop">
   <style>
 
   </style>
-  <mat-expansion-panel>
+  <div >
+  <mat-expansion-panel >
     <mat-expansion-panel-header>
       <mat-panel-title>
         <b>Education</b>
@@ -28,6 +31,7 @@
     </mat-expansion-panel-header>
     <app-education></app-education>
   </mat-expansion-panel>
+</div>
 
   <mat-expansion-panel>
     <mat-expansion-panel-header>
@@ -39,8 +43,8 @@
     </mat-expansion-panel-header>
     <app-projects></app-projects>
   </mat-expansion-panel>
-  
-  <mat-expansion-panel>
+
+  <mat-expansion-panel >
     <mat-expansion-panel-header>
       <mat-panel-title>
         <b>Experiences</b>
@@ -52,10 +56,7 @@
   </mat-expansion-panel>
 
 
-
-
-
-  <mat-expansion-panel>
+  <mat-expansion-panel >
     <mat-expansion-panel-header>
       <mat-panel-title>
         <b>Skills</b>
@@ -67,10 +68,7 @@
   </mat-expansion-panel>
 
 
-
-
-
-  <mat-expansion-panel>
+  <mat-expansion-panel >
     <mat-expansion-panel-header>
       <mat-panel-title>
         <b>Awards</b>
