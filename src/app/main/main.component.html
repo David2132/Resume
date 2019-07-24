@@ -1,20 +1,9 @@
 <link href="https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap" rel="stylesheet">
 
 
-<div @slideDown>
+<div >
   <h1 style="text-align: center;font-family: 'DM Serif Display', serif;"> David Duong's Resume</h1>
 
-  <div style="text-align: center;margin-bottom: 10pt">
-    <b *ngIf="visiters">
-      Visiter Count: {{visiters.length}}
-    </b>
-  </div>
-
-  <div style="text-align: center;margin-bottom: 10pt">
-    <b *ngIf="log">
-      Last Updated: {{log.Date}}
-    </b>
-  </div>
 </div>
 <div *ngIf="deviceInfo" class="desktop">
   <style>
