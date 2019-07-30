@@ -36,8 +36,7 @@ export class ContactComponent implements OnInit {
         Validators.required
       ]),
       Email: new FormControl('', [
-        Validators.required,
-        Validators.pattern( + '@' + '[a-zA-Z]+' + '.' + '[a-zA-Z]*')
+        Validators.required
       ]),
 
 
